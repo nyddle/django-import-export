@@ -312,7 +312,6 @@ class Resource(six.with_metaclass(DeclarativeMetaclass)):
                 raise
 
         for row in dataset.dict:
-            row = ',' + row
             try:
                 row_result = RowResult()
                 instance, new = self.get_or_init_instance(instance_loader, row)
